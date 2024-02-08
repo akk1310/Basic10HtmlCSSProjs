@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - Form</title>
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body{
+            background-color: #A9A9A9;
+
+        }
+        @media screen and (max-width: 500px) {
+            /* body{
+                background-color: greenyellow !important;
+            } */
+            .appl{
+            /* width: max(90vw,500px) !important; */
+            width: 500px !important;
+            /* margin: auto  100px auto 150px !important; */
+            /* margin-right: 10px !important; */
+            /* padding: auto -15px ; */
+            }
+            form{
+                grid-template-rows: repeat(11,100px) !important;
+                /* grid-template-columns: repeat(1,400px) !important; */
+                width: 400px !important;
+                /* margin: auto; */
+                margin: 10px auto 10px auto;
+            }
+            .lab2{
+            
+            grid-column: 1/2 !important;
+            }
+            .lab3{
+            grid-row:4/5 !important ;
+            grid-column: 1/2 !important;
+            }
+            .lab4{
+            grid-row: 5/6 !important; 
+            grid-column: 1/2 !important;
+            }
+            .address{
+            grid-row: 6/7 !important;
+            grid-column: 1/2 !important;
+            height: 100px !important;
+            }
+            .citys{
+            grid-row: 7/8 !important;
+            grid-column: 1/2 !important;
+            }
+            .pins{
+                grid-row: 8/9 !important;
+            }
+            .dat{
+                grid-row: 9/10 !important;
+            }
+            .up{
+                grid-row: 10/11 !important;
+                margin: auto 28px auto 0px !important;
+            }
+            .sub{
+                grid-column: 1/2 !important;
+                grid-row: 11/12 !important;
+        margin: auto  !important;
+
+            }
+            input{
+            max-width: 501px !important;
+            width: 100% !important;
+            /* heisght: 35px; */
+            /* border-radius: 5px; */
+            /* border: 1px solid black; */
+        }
+            
+  
+}
+        .heading{
+            font-family: "Inter", sans-serif;
+            font-size: 30px;
+            grid-column: 1/3;
+            display: flex;
+            /* justify-content: center; */
+            margin:10px;
+           
+            align-items: center;
+            font-weight: 600;
+
+        }
+    
+
+        
+        .appl{
+            font-family: "Inter", sans-serif;
+            background-color: #ffff;
+
+            margin: auto;
+            margin-top: 50px;
+            width: 600px;
+            border: 0px solid black;
+            border-radius: 13px;
+            
+        }
+        input{
+            max-width: 260px;
+            height: 35px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        select{
+            max-width: 260px; 
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid black;
+            /* color: red; */
+        }
+        
+        form{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-rows: 70px 80px 80px 170px 100px 100px ;  */
+            grid-template-rows: 70px 80px 80px 160px 120px 80px 100px; 
+        }
+        .address{
+            /* margin: auto; */
+            /* width: 100px; */
+            grid-column: 1/3;
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            /* font-size: 15px; */
+            font-weight: 500;
+
+
+        }
+        .citys{
+            grid-column: 1/2;
+            grid-row: 5/6;
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+        }
+        .upload{
+            width: 260px;
+        }
+        .lab1{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+        }
+        .lab2{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+
+        }
+        .lab3{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+
+        }
+        .lab4{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+
+        }
+        .pins{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+        }
+        .dat{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            font-weight: 500;
+
+
+        }
+        .up{
+            display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 10px;
+            gap: 5px;
+            /* align-items: center; */
+            font-weight: 500;
+
+        }
+        #cv{
+            display: flex;
+            align-self: flex-end;
+            flex-wrap: wrap;
+            /* align-items: ; */
+            align-content:center;
+            padding: 6px 30px;
+            width: 200px;
+            height: 25px;
+        }
+       .sub{
+        grid-column: 2/3;
+        display: flex;
+            flex-direction: column;
+            margin: auto 10px auto 180px;
+            width: 100px;
+     }
+     .sub input{
+        background-color:#FF0000;
+        color: #ffff;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        border: 0px;
+
+
+     }
+       
+       
+
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="appl">
+            <form action="/" method="post">
+                <div class="heading">
+                    <div>
+                        Job Application 
+                    </div>
+                    <div id="web" style="
+                    font-size: 20px">
+                        (Web)
+                    </div>
+                </div>
+                <div class="lab1">
+
+                    <label class="lab1" for="fname">First Name
+                        <input id="fname" type="text">
+                    </label>
+                </div>
+                <div class="lab2">
+
+                    <label class="lab2" for="lname">Last Name
+                        <input id="lname" type="text">
+                    </label>
+                </div>
+                <div class="lab3">
+
+                    <label class="lab3" for="email">Email
+                        <input id="email" type="email">
+                    </label>
+                </div>
+                <div class="lab4">
+
+                    <label class="lab4" for="role">Job Role
+                        <select name="role" id="role">
+                            <option value="">Select Job Rule</option>
+                            <option value="Engineer">Engineer</option>
+                            <option value="Doctor">Doctor</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="address">
+
+                    <label class="address" for="address">Address
+                        <textarea name="address" id="address" cols="40" rows="8"></textarea>
+                    </label>
+                </div>
+                <div class="citys">
+
+                    <label class="citys" for="city">City
+                        <input id="city" type="text">
+                    </label>
+                </div>
+                <div class="pins">
+
+                    <label class="pins" for="pin">Pincode
+                        <input id="pin" type="number">
+                    </label>
+                </div>
+                <div class="dat">
+
+                    <label class="dat" for="date">Start Date
+                        <input id="date" type="date">
+                    </label>
+                </div>
+                <div class="up">
+
+                    
+                        
+                        <label class="up" for="cv">Upload your Cv
+                            <input id="cv" type="file">
+                        </label>
+                    
+                </div>
+                <div class="sub">
+                    <input type="submit" value="Apply Now">
+                </div>
+
+                
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

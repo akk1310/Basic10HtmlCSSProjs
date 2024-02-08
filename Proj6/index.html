@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| myTunes Website |</title>
+    <script src="https://kit.fontawesome.com/8e909f396f.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            font-family: "Roboto", sans-serif;
+            position: relative;
+            min-height: 100%;
+
+        }
+        @media screen and (max-width:800px){
+            nav{
+                flex-direction: column;
+                justify-content: center !important;
+                
+            
+            }
+            .list ul{
+                flex-direction: column;
+                justify-content: center !important;
+            }
+            .title{
+                left: unset !important;
+            }
+            .list{
+                right: unset !important;
+            }
+            .txt1{
+                left: 50px !important;
+            }
+           
+
+            
+
+        }
+        nav{
+            display: flex;
+            /* border: 2px solid black; */
+            justify-content: space-between;
+            min-height: 80px;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+            /* margin: auto; */
+            box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.2);
+            background-color: #270082;
+            color: white;
+            z-index: 10;
+            
+            
+        }
+        .title{
+            font-size: 40px;
+            font-weight: 500;
+            /* border: 2px solid red; */
+            position: relative;
+            left: 10%;
+        }
+        .list{
+            /* border: 2px solid green; */
+            position: relative;
+            right: 10%;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 23px;
+        }
+       
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            
+        }
+        nav ul li a:hover{
+            color: white;
+            text-decoration:underline;
+            line-height: 10px;
+            
+            text-underline-offset:10px;
+            transition: 0.4s ease-in;
+        }
+        .list ul{
+            display: flex;
+            /* border: 2px solid red; */
+            
+        }
+        .hero{
+            /* border: 2px solid red; */
+            color: white;
+            background-image: url("images/hero_image.png");
+            min-height: 100vh;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+
+
+        }
+        .txt1{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            top: 30%;
+            text-align: center;
+            width: 80%;
+            left: 200px;
+            /* align-content: center; */
+
+        }
+        .mhead{
+            font-size: 100px;
+            font-weight: 600;
+        }
+        .shead{
+            font-size: 40px;
+            font-weight: 500;
+        }
+        .thead{
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .sec2{
+            /* width: 100%; */
+            position: relative;
+            /* left: 200px; */
+            padding: 50px 200px;
+            background-color: #281154;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* border: 2px solid red; */
+        }
+        .ipadimg{
+            position: relative;
+            top: 400px;
+            margin-top: -400px;
+            
+        }
+        .primary-btn{
+            background-color: red;
+            padding: 10px 15px;
+            border: none;
+            transition: 0.2s ease-in-out;
+            color: white;
+        }
+        .primary-btn:hover{
+            transition: 0.2s ease-in-out;
+            opacity: 0.8;
+        }
+        .sec3{
+            /* border: 2px solid red; */
+            padding: 10px 200px;
+            margin-top: 350px;
+            
+            
+        }
+        .container1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+        }
+        .heads1{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .heads2{
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+        }
+        .butn button{
+            background-color: #270082;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+        .butn button:hover{
+           opacity: 0.8;
+           transition: 0.2s ease-in-out;
+        }
+        .sec4{
+            background-image: url("images/video.png");
+            min-height: 100vh;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+
+        }
+        .container2{
+            /* width: 80%; */
+            /* border: 2px solid green; */
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 150px;
+            gap: 30px;
+            padding: 0px 200px;
+        }
+        .container2 .hd1{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .container2 .hd2{
+            /* font-size: 20px; */
+            font-weight: 200;
+        }
+        .container3{
+            /* border: 2px solid black; */
+            padding: 50px 200px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: black;
+
+
+        }
+        .giftline{
+            /* border: 2px solid red; */
+            min-height: 1px;
+            color: black !important;
+            width: 100%;
+            background-color: black;
+        }
+        .gifttxt{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .gifth1{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .gifth2{
+            /* font-size: 10px; */
+            font-weight: 300;
+        }
+        .sec6{
+            /* color: black; */
+            /* border: 2px solid red; */
+            background-color: #1b0058;
+            color: white;
+            padding: 30px 200px;
+        }
+        .container4{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+            /* align-content: center; */
+        }
+        .listh1{
+            text-decoration: underline;
+            text-underline-offset:10px;
+            
+        }
+        .listtxt{
+            margin-top: 14px;
+
+        }
+        .listtxt ul li{
+            list-style: none;
+            line-height: 30px;
+        }
+        footer{
+            color: white;
+            /* min-height: 200px; */
+            background-color: #270082;
+            padding: 25px;
+            text-align: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section class="sec1">
+        <nav>
+            <div class="title">myTunes</div>
+            <div class="list">
+                <ul>
+                    <li><a href="/">Overview</a></li>
+                    <li><a href="/">Music</a></li>
+                    <li><a href="/">Video</a></li>
+                    <li><a href="/">Gift Cards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="txt1">
+
+                <div class="mhead">
+                    my Tunes
+                </div>
+                <div class="shead">
+                    our music, movies, and TV shows take center stage.
+                </div>
+                <div class="thead">
+                    myTunes is the best way to organize and enjoy the music, movies, and TV shows you already have — and shop for the ones you want. Enjoy all the entertainment myTunes has to offer on your Mac and PC.
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section class="sec2">
+        <div class="container">
+            <h2>
+                <span>
+                    <i class="fa-solid fa-music"></i>
+                </span>
+                Music
+            </h2>
+            <h4>
+                Stream over 45 million songs, ad-free. Or download albums and tracks to listen to offline. All the music in your personal myTunes library — no matter where it came from — lives right alongside the Orange Music catalog. Start your free three-month trial with no commitment, and cancel anytime.
+            </h4>
+            <button class="primary-btn">
+                Start Your Trial Now
+            </button>
+            <p>
+                Orange Music is available in myTunes, and for iOS and Android devices.
+            </p>
+            <div class="ipadimg">
+                <img src="images/ipad-iphone.png" alt="ipad image">
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <div class="container1">
+            <div class="heads1">
+                The movie and TV collection you always wished for. Granted.
+
+            </div>
+            <div class="heads2">
+                With over 100,000 movies and TV shows to choose from, there’s always something great to watch on myTunes and if you watch on Orange TV 4K, you’ll be able to enjoy a tremendous selection of your favorite content in 4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you’ve been waiting to see — anytime, anywhere. Just tap to play, or even download if you’re going somewhere you won’t have Wi-Fi.
+            </div>
+            <div class="butn">
+                <button>Read more</button>
+            </div>
+            <div class="lapimg">
+                <img src="images/mac.png" alt="macimg">
+            </div>
+        </div>
+    </section>
+    <section class="sec4">
+        <div class="container2">
+            <div class="hd1">
+                A world of entertainment. Available wherever you are.
+            </div>
+            <div class="hd2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, aperiam saepe deleniti quasi nesciunt accusamus natus quibusdam eveniet est sequi vitae nulla illo? Reprehenderit dolor neque, odit ipsam rerum tempora in beatae porro cupiditate voluptatibus aspernatur? Deleniti sed rerum porro assumenda, voluptate qui vitae aut.
+            </div>
+        </div>
+    </section>
+    <section class="sec5">
+        <div class="container3">
+            <div class="giftimg">
+                <img src="images/gift_card.png" alt="giftcard img">
+            </div>
+            <div class="gifttxt">
+                <div class="gifth1">
+                    Gift Card
+                </div>
+                <div class="gifth2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum explicabo, excepturi eaque commodi minima quas repellendus assumenda facere hic, earum quasi iste asperiores molestiae obcaecati laborum, voluptatum alias velit cupiditate! Quae soluta sapiente quasi, iusto quam magnam doloribus natus quod eius, rerum asperiores aspernatur. Illum neque sequi odit fuga.
+                </div>
+                <div class="gifth3">
+                    Already have an Orange MyTunes Music Gift Card?
+
+
+                </div>
+                <div class="giftline"></div>
+                <div class="butn gigtbtn">
+                    <button>Redeem</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec6">
+        <div class="container4">
+            <div class="list1">
+                <div class="listh1">Shop & Learn</div>
+                <div class="listtxt">
+                    <ul>
+                        <li>Music</li>
+                        <li>Movies</li>
+                        <li>Music</li>
+                        <li>Shows</li>
+                        <li>Gift cards</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list2">
+                <div class="list1">
+                    <div class="listh1">Orange Store</div>
+                    <div class="listtxt">
+                        <ul>
+                            <li>Music</li>
+                            <li>Movies</li>
+                            <li>Music</li>
+                            <li>Shows</li>
+                            <li>Gift cards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="list3">
+                <div class="list1">
+                    <div class="listh1">Education & Business</div>
+                    <div class="listtxt">
+                        <ul>
+                            <li>Music</li>
+                            <li>Movies</li>
+                            <li>Music</li>
+                            <li>Shows</li>
+                            <li>Gift cards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="list4">
+                <div class="list1">
+                    <div class="listh1">About Orange</div>
+                    <div class="listtxt">
+                        <ul>
+                            <li>Music</li>
+                            <li>Movies</li>
+                            <li>Music</li>
+                            <li>Shows</li>
+                            <li>Gift cards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="foot">
+            Copyright &copy; 2024 Adnan Kundlik
+        </div>
+    </footer>
+    
+</body>
+</html>
